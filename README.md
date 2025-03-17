@@ -43,7 +43,7 @@ python train.py -t my_trainset -v my_valset -f Masu_ens_aug -n my_model
 **Arguments:**
 - `-t`: Path to the training dataset (inside `data/`).
 - `-v`: Path to validation dataset (defaults to training data if not provided).
-- `-f`: Path to the pre-trained model in `models/`.
+- `-f`: Path to the pre-trained model in `models/` (defaults to COCO pre-trained weights if not provided).
 - `-n`: Name of the output model (saved in `models/`).
 
 Additional training parameters are configurable in `train.py`.
