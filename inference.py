@@ -68,8 +68,8 @@ valid_extensions = (".jpg", ".jpeg", ".png", ".bmp", ".tiff", ".gif")
 if args.image_ids == []:
     image_names = args.image_names
 elif args.image_names == []:
-    indices = range(args.image_ids[0], args.image_ids[1])
-    image_names = [os.path.splitext(f)[0] for f in sorted(os.listdir(IMAGE_DIR)) if f.lower().endswith(valid_extensions)][indices]
+    indices = np.arange(args.image_ids[0], args.image_ids[1])
+    image_names = np.array([os.path.splitext(f)[0] for f in sorted(os.listdir(IMAGE_DIR)) if f.lower().endswith(valid_extensions)])[indices]
 
 
 inference_start_time = time.time()

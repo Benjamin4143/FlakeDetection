@@ -29,6 +29,8 @@ project_root/
 │   │   ├── annotations.json  # Labels (see LABELLING section)
 │-- inferences/         # Stores inference results
 │-- models/             # Stores trained models
+│   ├── my_pre_trained_model/  # Example model to be used for transfer learning
+
 ```
 
 ---
@@ -37,7 +39,7 @@ project_root/
 Training is performed using `train.py`. Below is an example command:
 
 ```sh
-python train.py -t my_trainset -v my_valset -f Masu_ens_aug -n my_model
+python train.py -t my_trainset -v my_valset -f my_pre_trained_model -n my_model
 ```
 
 **Arguments:**
